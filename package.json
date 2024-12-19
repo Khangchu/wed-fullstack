@@ -1,0 +1,22 @@
+{
+  "name": "web-full",
+  "version": "1.0.0",
+  "description": "Khangchu",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/Khangchu/wed-fullstack.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "khangchu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}
