@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git remote add origin https://github.com/Khangchu/wed-fullstack.git"
+    "add": "git remote add origin https://github.com/Khangchu/wed-fullstack.git"
   },
   "keywords": [
     "nodejs"
