@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./src/server.js",
-    "add": "git remote add origin https://github.com/Khangchu/wed-fullstack.git"
+    "add": "git push origin master"
   },
   "repository": {
     "type": "git",
