@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "add": "git remote add origin https://github.com/Khangchu/wed-fullstack.git"
   },
   "repository": {
     "type": "git",
-    "add": "git remote add origin https://github.com/Khangchu/wed-fullstack.git"
+    "add1": "git remote add origin https://github.com/Khangchu/wed-fullstack.git"
   },
   "keywords": [
     "nodejs"
