@@ -1,5 +1,18 @@
+const { json } = require('express');
+const connection = require('../config/database')
+let user = []
 const getHomepage = (req, res) =>{
-    res.send('hello world!!!');
+connection.query(
+    ' SELECT *FROM Users u ',
+    function(err,results,fields){
+        user= results;
+      console.log(">>>results=",user);
+      console.log(">>>fields=",fields);
+      console.log(JSON.stringify(user));
+      res.send(JSON.stringify(user));
+    }
+    )
+ 
 }
 const getABC = (req, res) =>{
     res.render('sample1.ejs')
@@ -24,6 +37,14 @@ const getlove3 = (req, res) =>{
     // res.send('<h1> Hello World! </h1>');
     res.render('love3.ejs');
 }
+const getdatabase = connection.query(
+    ' SELECT *FROM Users u ',
+    function(err,results,fields){
+      console.log(">>>results=",results);
+      console.log(">>>fields=",fields);
+    }
+)
+
 module.exports={
-    getHomepage,getABC,getkhangchu,getlove,getlove1,getlove2,getlove3
+    getHomepage,getABC,getkhangchu,getlove,getlove1,getlove2,getlove3,getdatabase
 }

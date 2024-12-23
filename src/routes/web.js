@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {getHomepage,getABC,getkhangchu,getlove,getlove1,getlove2,getlove3} = require('../controllers/homecontroller');
+const {getHomepage,getABC,getkhangchu,getlove,getlove1,getlove2,getlove3,getdatabase} = require('../controllers/homecontroller');
 router.get('/', getHomepage);
   router.get('/abc', getABC)
   router.get('/khangchu', getkhangchu)
