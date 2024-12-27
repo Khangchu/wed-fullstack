@@ -5,6 +5,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="/css/topnav.css">
      <link rel="stylesheet" href="/css/table.css">
+ 
     <style>
         table {
           border-collapse: collapse;
@@ -21,7 +22,7 @@
         </style>
 </head>
 <body>
-  <%= listusers %>
+  <!-- <%= JSON.stringify(listusers) %> -->
     <div class="topnav">
         <a class="active" href="/">Home</a>
         <a href="/create">Create User</a>
@@ -36,34 +37,33 @@
       <TH>CITY</TH>
       <th>ACTIONS</th>
     </tr>
-    <tr>
-      <td>Peter</td>
-      <td>Griffin</td>
-      <td>$100</td>
-      <td>$100</td>
-      <td>
-        <button>Edit</button>
-        <button>Delete</button>
-      </td>
-    </tr>
-    <tr>
-      <td>Lois</td>
-      <td>Griffin</td>
-      <td>$150</td>
-      <td>$150</td>
-    </tr>
-    <tr>
-      <td>Joe</td>
-      <td>Swanson</td>
-      <td>$300</td>
-      <td>$300</td>
-    </tr>
-    <tr>
-      <td>Cleveland</td>
-      <td>Brown</td>
-      <td>$250</td>
-      <td>$250</td>
-    </tr>
+    <!-- <% for(let i= 0;i< listusers.length; i++) {%> 
+      <tr>
+        <td><%= listusers[i].id %></td>
+        <td><%= listusers[i].email %></td>
+        <td><%= listusers[i].name %></td>
+        <td><%= listusers[i].city %></td>
+        <td><button>EDIT</button> <BUtton>DELETE</BUtton></td>
+      </tr>
+      
+      <%}%> -->
+
+      <% listusers.forEach(function(users) { %>
+        <tr>
+          <td><%= users.id %></td>
+          <td><%= users.email %></td>
+          <td><%= users.name %></td>
+          <td><%= users.city %></td>
+          <td>
+            <a href="/update/<%= users.id %>">
+              <button>EDIT</button>
+            </a>
+            <a href="/delete/<%= users.id %>">
+             <BUtton>DELETE</BUtton></td>
+            </a>
+        </tr>
+        <% }); %>
+    
   </table>
   </div>
     
